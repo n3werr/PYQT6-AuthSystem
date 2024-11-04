@@ -1,6 +1,6 @@
 import sys
 import sqlite3
-import time
+import re
 from PyQt6 import uic
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLineEdit, QMessageBox
 
@@ -72,6 +72,41 @@ class Auth(QMainWindow):
         if password == '':
             self.ErrorMsg.show()
             self.ErrorMsg.setText("Введите пароль")
+            return
+        
+        if '@' not in mail or '.' not in mail:
+            self.ErrorMsg.show()
+            self.ErrorMsg.setText("Введите верную почту.")
+            return
+        
+        if len(password) < 8:
+            QMessageBox.warning(self, "Ошибка", 
+                                "Пароль должен содержать минимум 8 символов.")
+            return 
+        
+        if not re.search(r"[A-Z]", password):
+            QMessageBox.warning(self, "Ошибка", 
+                                "Пароль должен содержать хотя бы одну заглавную букву.")
+            return
+
+        if not re.search(r"[a-z]", password):
+           QMessageBox.warning(self, "Ошибка", 
+                               "Пароль должен содержать хотя бы одну строчную букву.")
+           return
+
+        if not re.search(r"[0-9]", password):
+            QMessageBox.warning(self, "Ошибка", 
+                                "Пароль должен содержать хотя бы одну цифру.")
+            return
+    
+        if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
+            QMessageBox.warning(self, "Ошибка", 
+                                "Пароль должен содержать хотя бы один специальный символ.")
+            return
+
+        if re.search(r"\s", password):
+            QMessageBox.warning(self, "Ошибка", 
+                                "Пароль не должен содержать пробелы.")
             return
 
         con = sqlite3.connect("users.sqlite")
