@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>authWidget</class>
+ <widget class="QMainWindow" name="authWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Auth">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0.5);
+border-radius: 10px;
+font: 75 20pt &quot;Comic Sans MS&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;РЕГИСТРАЦИЯ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BackGroundWhite">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>391</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0.5);
+border-radius: 10px;
+font: 75 20pt &quot;Comic Sans MS&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>300</y>
+      <width>371</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>24</number>
+     </property>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="BackGround">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(bg.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ErrorMsg">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>491</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0.5);
+border-radius: 10px;
+font: 75 20pt &quot;Comic Sans MS&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="registerBtn">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>349</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover{
+background-color: rgba(255,255,255,0.7);
+}
+QPushButton{
+background-color: rgba(255,255,255,0.5);
+border-radius: 10px;
+font: 75 20pt &quot;Comic Sans MS&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>ЗАРЕГИСТРИРОВАТЬСЯ</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>371</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="name">
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ИМЯ:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nameLine">
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 5px;
+background-color: rgb(184, 184, 184);
+border-style: none;
+border-radius: 10px;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="surname">
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ФАМИЛИЯ:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="surnameLine">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 5px;
+background-color: rgb(184, 184, 184);
+border-style: none;
+border-radius: 10px;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="patronymic">
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ОТЧЕСТВО:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="patronymicLine">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 5px;
+background-color: rgb(184, 184, 184);
+border-style: none;
+border-radius: 10px;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="datebirth">
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Дата рождения:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateEdit" name="dateLine">
+       <property name="styleSheet">
+        <string notr="true">padding: 5px;
+background-color: rgb(184, 184, 184);
+border-style: none;
+border-radius: 10px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="n3werr">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>560</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0.5);
+border-radius: 10px;
+font: 75 20pt &quot;Comic Sans MS&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;developed n3werr&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>BackGround</zorder>
+   <zorder>Auth</zorder>
+   <zorder>formWidget</zorder>
+   <zorder>ErrorMsg</zorder>
+   <zorder>BackGroundWhite</zorder>
+   <zorder>registerBtn</zorder>
+   <zorder>formLayoutWidget</zorder>
+   <zorder>n3werr</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
